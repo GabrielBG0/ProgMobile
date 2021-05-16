@@ -5,15 +5,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainMenu">
+
     <TextView
         android:id="@+id/txtNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="89dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginLeft="164dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginRight="165dp"
+        android:layout_marginBottom="58dp"
         android:hint="Usuário"
         android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/listarAlunos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/listarAlunos"
+        android:layout_width="285dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginRight="63dp"
+        android:layout_marginBottom="37dp"
+        android:onClick="listarAlunos"
+        android:text="Listar Alunos"
+        app:layout_constraintBottom_toTopOf="@+id/cadastrarAlunos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNome" />
+
+    <Button
+        android:id="@+id/cadastrarAlunos"
+        android:layout_width="285dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginEnd="63dp"
+        android:layout_marginRight="63dp"
+        android:onClick="cadastrarAlunos"
+        android:text="Cadastrar Alunos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listarAlunos" />
+
+    <Button
+        android:id="@+id/mainMenuBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="293dp"
+        android:layout_marginLeft="293dp"
+        android:layout_marginTop="329dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="22dp"
+        android:text="Voltar"
+        app:backgroundTint="#F44336"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cadastrarAlunos"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

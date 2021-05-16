@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class DBHelper extends SQLiteOpenHelper {
+public class DBHelperAdm extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "sistemaAlunos", TABLE_NAME = "contato.db", COLUMM_ID = "id", COLUMM_NOME = "nome";
@@ -18,7 +18,7 @@ public class DBHelper extends SQLiteOpenHelper {
             "id integer primary key autoincrement, nome text not null, " +
             "email text not null, usuario text not null, senha text not null);";
 
-    public DBHelper(@Nullable Context context) {
+    public DBHelperAdm(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 

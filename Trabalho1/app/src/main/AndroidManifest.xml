@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Trabalho1">
-        <activity android:name=".Cadastro"></activity>
+        <activity android:name=".CadastroCurso"></activity>
+        <activity android:name=".ListagemAlunos" />
+        <activity android:name=".CadastroAluno" />
+        <activity android:name=".CadastroAdm" />
         <activity android:name=".MainMenu" />
         <activity android:name=".MainActivity">
             <intent-filter>

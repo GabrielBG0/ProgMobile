@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Cadastro extends AppCompatActivity {
-    private DBHelper helper = new DBHelper(this);
+public class CadastroAdm extends AppCompatActivity {
+    private DBHelperAdm helper = new DBHelperAdm(this);
     private EditText edtNome, edtEmail, edtUsuario, edtSenha, edtConfSenha;
 
     @Override
@@ -27,13 +27,13 @@ public class Cadastro extends AppCompatActivity {
         String nome = edtNome.getText().toString(), email = edtEmail.getText().toString(), usuario = edtUsuario.getText().toString();
         String senha = edtSenha.getText().toString(), confSenha = edtConfSenha.getText().toString();
         if (!senha.equals(confSenha)){
-            Toast t = Toast.makeText(Cadastro.this, "senhas não conhecidem", Toast.LENGTH_SHORT);
+            Toast t = Toast.makeText(CadastroAdm.this, "senhas não conhecidem", Toast.LENGTH_SHORT);
             t.show();
             edtConfSenha.setText("");
         } else {
             Contato c = new Contato(nome, email, usuario, senha);
             helper.insereContato(c);
-            Toast t = Toast.makeText(Cadastro.this, "Cadastro realizado com sucesso", Toast.LENGTH_SHORT);
+            Toast t = Toast.makeText(CadastroAdm.this, "Cadastro realizado com sucesso", Toast.LENGTH_SHORT);
             t.show();
             limpar();
         }

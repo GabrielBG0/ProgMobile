@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    private DBHelper helper = new DBHelper(this);
+    private DBHelperAdm helper = new DBHelperAdm(this);
     private EditText edtUsuario, edtSenha;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cadastrar(View view) {
-        Intent it = new Intent(this, Cadastro.class);
+        Intent it = new Intent(this, CadastroAdm.class);
         startActivity(it);
     }
 }
