@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Trabalho1">
-        <activity android:name=".ActivityCadastro"></activity>
-        <activity android:name=".Activity2" />
+        <activity android:name=".Cadastro"></activity>
+        <activity android:name=".MainMenu" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

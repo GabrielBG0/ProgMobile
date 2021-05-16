@@ -1,8 +1,17 @@
 package com.example.trabalho1;
 
-public class Contato {
+import java.io.Serializable;
+
+public class Contato implements Serializable {
     private int id;
     private String nome, email, usuario, senha;
+
+    public Contato( String nome, String email, String usuario, String senha) {
+        this.nome = nome;
+        this.email = email;
+        this.usuario = usuario;
+        this.senha = senha;
+    }
 
     public int getId() {
         return id;
