@@ -10,7 +10,7 @@ import android.widget.Toast;
 import static java.lang.Integer.parseInt;
 
 public class CadastroAluno extends AppCompatActivity {
-    private DBHelperAdm helper = new DBHelperAdm(this);
+    private DBHelperAluno helper = new DBHelperAluno(this);
     private EditText alunoNome, alunoEmail, alunoCPF, alunoTelefone, alunoCurso;
 
     @Override
