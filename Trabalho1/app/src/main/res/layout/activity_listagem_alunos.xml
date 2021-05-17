@@ -12,15 +12,16 @@
         <ListView
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:id="@+id/listContatos">
+            android:id="@+id/listAluno">
         </ListView>
+
         <Button
+            android:id="@+id/btnNovoAluno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Novo Cadastro"
-            android:id="@+id/btnNovoCadastro"
             android:layout_gravity="center_horizontal"
-            />
+            android:onClick="novoAluno"
+            android:text="Novo Aluno" />
     </LinearLayout>
 
 

@@ -1,6 +1,8 @@
 package com.example.trabalho1;
 
-public class Aluno {
+import java.io.Serializable;
+
+public class Aluno implements Serializable {
     int id, couseId;
     String nome, email, cpf, telefone;
 
@@ -10,6 +12,18 @@ public class Aluno {
         this.email = email;
         this.cpf = cpf;
         this.telefone = telefone;
+    }
+
+    public Aluno(int id, int couseId, String nome, String email, String cpf, String telefone) {
+        this.id = id;
+        this.couseId = couseId;
+        this.nome = nome;
+        this.email = email;
+        this.cpf = cpf;
+        this.telefone = telefone;
+    }
+
+    public Aluno() {
     }
 
     public int getId() {
@@ -58,5 +72,9 @@ public class Aluno {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+    public String toString() {
+        return nome.toString() + " Curso: ";
     }
 }

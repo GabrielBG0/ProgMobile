@@ -35,7 +35,7 @@ public class DBHelperAdm extends SQLiteOpenHelper {
         this.onCreate(db);
     }
 
-    public void insereContato(Contato c){
+    public void insereContato(Contato c) {
         db = this.getReadableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMM_NOME, c.getNome());
@@ -46,16 +46,16 @@ public class DBHelperAdm extends SQLiteOpenHelper {
         db.close();
     }
 
-    public String buscarSenha(String usuario){
+    public String buscarSenha(String usuario) {
         db = this.getReadableDatabase();
         String query = "select usuario, senha from " + TABLE_NAME;
         Cursor cursor = db.rawQuery(query, null);
-        if (cursor.moveToFirst()){
+        if (cursor.moveToFirst()) {
             do {
-                if (cursor.getString(0).equals(usuario)){
+                if (cursor.getString(0).equals(usuario)) {
                     return cursor.getString(1);
                 }
-            }while(cursor.moveToNext());
+            } while (cursor.moveToNext());
         }
         return "usuario não encontrado";
     }

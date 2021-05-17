@@ -2,6 +2,7 @@ package com.example.trabalho1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -20,13 +21,12 @@ public class CadastroAdm extends AppCompatActivity {
         edtUsuario = findViewById(R.id.edtUsuario);
         edtSenha = findViewById(R.id.edtSenha);
         edtConfSenha = findViewById(R.id.edtConfSenha);
-
     }
 
     public void cadastrar(View view) {
         String nome = edtNome.getText().toString(), email = edtEmail.getText().toString(), usuario = edtUsuario.getText().toString();
         String senha = edtSenha.getText().toString(), confSenha = edtConfSenha.getText().toString();
-        if (!senha.equals(confSenha)){
+        if (!senha.equals(confSenha)) {
             Toast t = Toast.makeText(CadastroAdm.this, "senhas não conhecidem", Toast.LENGTH_SHORT);
             t.show();
             edtConfSenha.setText("");
@@ -35,18 +35,9 @@ public class CadastroAdm extends AppCompatActivity {
             helper.insereContato(c);
             Toast t = Toast.makeText(CadastroAdm.this, "Cadastro realizado com sucesso", Toast.LENGTH_SHORT);
             t.show();
-            limpar();
+            finish();
         }
 
-
-    }
-
-    private void limpar() {
-        edtNome.setText("");
-        edtEmail.setText("");
-        edtUsuario.setText("");
-        edtSenha.setText("");
-        edtConfSenha.setText("");
     }
 
     public void cancelar(View view) {

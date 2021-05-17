@@ -11,6 +11,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private DBHelperAdm helper = new DBHelperAdm(this);
     private EditText edtUsuario, edtSenha;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     public void conectar(View view) {
         String usr = edtUsuario.getText().toString(), senha = edtSenha.getText().toString();
         String pass = helper.buscarSenha(usr);
-        if (senha.equals(pass)){
+        if (senha.equals(pass)) {
             Intent it = new Intent(this, MainMenu.class);
             it.putExtra("ch_usuario", usr);
             startActivity(it);
