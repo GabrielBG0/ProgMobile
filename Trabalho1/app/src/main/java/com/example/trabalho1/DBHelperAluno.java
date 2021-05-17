@@ -13,10 +13,10 @@ import java.util.ArrayList;
 public class DBHelperAluno extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "sistemaAlunos", TABLE_NAME = "aluno.db", COLUMM_ID = "id", COLUMM_NOME = "nome";
+    private static final String DATABASE_NAME = "sistemaAlunos", TABLE_NAME = "aluno", COLUMM_ID = "id", COLUMM_NOME = "nome";
     private static final String COLUMM_EMAIL = "email", COLUMM_CPF = "cpf", COLUM_TEL = "telefone", COLUM_CURSOID = "cursoId";
     SQLiteDatabase db;
-    private static final String TABLE_CRATE = "create table contato (" +
+    private static final String TABLE_CRATE = "create table "+ TABLE_NAME +" (" +
             "id integer primary key autoincrement, nome text not null, " +
             "email text not null, usuario text not null, senha text not null, cursoId integer not null, " +
             "FOREIGN KEY (cursoId) REFERENCES curso(id));";

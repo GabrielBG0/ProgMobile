@@ -75,6 +75,6 @@ public class Aluno implements Serializable {
     }
 
     public String toString() {
-        return nome.toString() + " Curso: ";
+        return nome.toString() + " Curso: " + Integer.toString(couseId);
     }
 }

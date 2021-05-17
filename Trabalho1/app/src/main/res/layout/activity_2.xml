@@ -45,12 +45,15 @@
         android:id="@+id/cadastrarAlunos"
         android:layout_width="285dp"
         android:layout_height="58dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
         android:layout_marginTop="37dp"
         android:layout_marginEnd="63dp"
         android:layout_marginRight="63dp"
-        android:onClick="cadastrarAlunos"
-        android:text="Cadastrar Alunos"
+        android:onClick="cadastrarCursos"
+        android:text="Cadastrar Cursos"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listarAlunos" />
 
     <Button

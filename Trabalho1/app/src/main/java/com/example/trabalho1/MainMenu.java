@@ -24,8 +24,8 @@ public class MainMenu extends AppCompatActivity {
         startActivity(it);
     }
 
-    public void cadastrarAlunos(View view) {
-        Intent it = new Intent(MainMenu.this, CadastroAluno.class);
+    public void cadastrarCursos(View view) {
+        Intent it = new Intent(MainMenu.this, CadastroCurso.class);
         startActivity(it);
     }
 }

@@ -11,10 +11,10 @@ import androidx.annotation.Nullable;
 public class DBHelperAdm extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "sistemaAlunos", TABLE_NAME = "contato.db", COLUMM_ID = "id", COLUMM_NOME = "nome";
+    private static final String DATABASE_NAME = "sistemaAlunos", TABLE_NAME = "contato", COLUMM_ID = "id", COLUMM_NOME = "nome";
     private static final String COLUMM_EMAIL = "email", COLUMM_USER = "usuario", COLUM_PASS = "senha";
     SQLiteDatabase db;
-    private static final String TABLE_CRATE = "create table contato (" +
+    private static final String TABLE_CRATE = "create table " + TABLE_NAME + " (" +
             "id integer primary key autoincrement, nome text not null, " +
             "email text not null, usuario text not null, senha text not null);";
 

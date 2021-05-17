@@ -57,7 +57,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btnCadastrarAluno"
+            android:id="@+id/btnCadastrarCurso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
@@ -74,3 +74,4 @@
             android:text="CANCELAR" />
     </LinearLayout>
 </LinearLayout>
+
