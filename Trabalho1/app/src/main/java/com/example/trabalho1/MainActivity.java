@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    private DBHelperAdm helper = new DBHelperAdm(this);
+    private DBHelper helper = new DBHelper(this);
     private EditText edtUsuario, edtSenha;
 
     @Override

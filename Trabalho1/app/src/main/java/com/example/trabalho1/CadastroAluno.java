@@ -12,7 +12,7 @@ import android.widget.Toast;
 import static java.lang.Integer.parseInt;
 
 public class CadastroAluno extends AppCompatActivity {
-    private DBHelperAluno helper = new DBHelperAluno(this);
+    private DBHelper helper = new DBHelper(this);
     private EditText alunoNome, alunoEmail, alunoCPF, alunoTelefone, alunoCurso;
     private Button botao;
     private Aluno aluno, altAluno;
@@ -28,10 +28,16 @@ public class CadastroAluno extends AppCompatActivity {
         alunoTelefone = findViewById(R.id.alunoTelefone);
         alunoCurso = findViewById(R.id.alunoCurso);
         botao = findViewById(R.id.btnCadastrarAluno);
+        botao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cadastrar();
+            }
+        });
         Intent it = getIntent();
         altAluno = (Aluno) it.getSerializableExtra("ch_aluno");
         aluno = new Aluno();
-        helper = new DBHelperAluno(CadastroAluno.this);
+        helper = new DBHelper(CadastroAluno.this);
 
         if (altAluno != null) {
             botao.setText("Alterar");
@@ -39,7 +45,7 @@ public class CadastroAluno extends AppCompatActivity {
             alunoEmail.setText(altAluno.getEmail());
             alunoCPF.setText(altAluno.getCpf());
             alunoTelefone.setText(altAluno.getTelefone());
-            alunoCurso.setText(altAluno.getCouseId());
+            alunoCurso.setText(String.valueOf(altAluno.getCouseId()));
 
         } else {
             botao.setText("Cadastrar");
@@ -47,14 +53,16 @@ public class CadastroAluno extends AppCompatActivity {
 
     }
 
-    public void cadastrar(View view) {
+    public void cadastrar() {
         String nome = alunoNome.getText().toString(), email = alunoEmail.getText().toString(), cpf = alunoCPF.getText().toString();
+
         String telefone = alunoTelefone.getText().toString();
         int curso = parseInt(alunoCurso.getText().toString());
         Aluno a = new Aluno(curso, email, cpf, telefone, nome);
         if (botao.getText().toString().equals("Cadastrar")) {
             retornoBD = helper.insereAluno(a);
         } else {
+            a.setId(altAluno.getId());
             helper.atulaizarAluno(aluno);
             helper.close();
         }

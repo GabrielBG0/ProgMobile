@@ -2,14 +2,13 @@ package com.example.trabalho1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 public class CadastroAdm extends AppCompatActivity {
-    private DBHelperAdm helper = new DBHelperAdm(this);
+    private DBHelper helper = new DBHelper(this);
     private EditText edtNome, edtEmail, edtUsuario, edtSenha, edtConfSenha;
 
     @Override
